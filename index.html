@@ -74,13 +74,7 @@
 					<a href="http://www.itsokaytobesmart.com/post/39668823993/narwhals-explained-an-odd-tooth">image credit</a>
 				</section>
 
-				<section>
-					<h1>Solum</h1>
-					<ul>
-					  <li>Continuous Integration
-					  <li>Continuous Deployment
-					  <li>Platform As A Service
-				</section>
+
 
 				<section>
 					<h1>Dockenstack</h1>
@@ -95,7 +89,7 @@
 				</section>
 
 				<section>
-					<h1>CoreOS + Userdata</h1>
+					<h1>VM + Docker</h1>
 				</section>
 
 				<section>
@@ -104,15 +98,116 @@
 				</section>
 
 				<section>
-					<h1>What does solum use?</h1>
-					Nova Driver
-					CoreOS + Userdata
+					<h1>Solum - Project Goals</h1>
+					<h2>Developer Productivity</h2>
+					<ul>
+					  <li>Application Lifecycle Management (dev, test, stage, prod)
+					  <li>CI/CD w/ automated deployment
+					  <li>Integration with IDEs
+					</ul>
 				</section>
 
 				<section>
-				  <h1>Why not Cloud Foundry?</h1>
+					<h1>Solum - Project Goals</h1>
+					<h2>Application Portability</h2>
+					<ul>
+					  <li>export to other Openstack clouds
+					  <li>portability between private & public clouds
+					  <li>portability via standard formats ( Docker, <strike>KVM</strike> )
+					</ul>
 				</section>
 
+				<section>
+					<h1>Solum - Project Goals</h1>
+					<h2>Developer Productivity</h2>
+					<ul>
+					  <li>Application Lifecycle Management (dev, test, stage, prod)
+					  <li>CI/CD w/ automated deployment
+					  <li>Integration with IDEs
+					</ul>
+				</section>
+
+				<section>
+					<h1>Solum - Key Tenets</h1>
+					<h2>Community Driven</h2>
+					<ul>
+					  <li>Designed in the open ( started with empty git repo )
+					  <li>Opensourced under Apache 2.0
+					  <li>Mirror Openstack Governance and Contribution models.
+					  <li>Stackforge, Gerrit, Launchpad, IRC, etc.
+					</ul>
+				</section>
+
+				<section>
+					<h1>Solum - Key Tenets</h1>
+					<h2>Openstack Native Design</h2>
+					<ul>
+					  <li>Leverage existing projects ( Nova, Heat, Glance, Trove, etc)
+					  <li>multi-tenancy by default
+					  <li>Put functionality where it belongs ( contribute to other openstack projects )
+					</ul>
+				</section>
+
+				<section>
+					<h1>Solum Icehouse</h1>
+				  <ul>
+				    <li>VM (dib+kvm) or Docker (nova-docker)
+				    <li>Define Application (Planfile)
+				    <li>Take source from github, turn into running Application.
+				    <li>Heroku Buildpacks
+				  </ul>
+				</section>
+
+				<section>
+					<h1>Solum Juno</h1>
+				  <ul>
+				    <li>VM (coreos+docker) or Docker (nova-docker)
+				    <li>Define Application (Planfile)
+				    <li>Take source from github, turn into running Application.
+				    <li>Heroku Buildpacks, Dockerfile, Custom!
+				    <li>CI - Unit Testing
+				    <li>Workflow ( Mistral )
+				    <li>Services - Load Balancing, MySQL DB, Messaging
+				  </ul>
+				</section>
+
+				<section>
+				<img src="images/Solum-SourceToImagePipeline.png">
+				</section>
+
+				<section>
+				  <h2>Why not just run &lt;insert PAAS here&gt; on Openstack?</h2>
+				</section>
+
+				<section data-transition="none">
+				  <h2>&lt;insert PAAS here&gt; features</h2>
+				  <ul>
+				    <li>Scalable Design
+				    <li>Orchestration and Scheduling
+				    <li>Services: Database, Messaging, Hadoop
+				    <li>Identity Management
+				    <li>Health monitoring and Auto healing
+				    <li>Application build and Deploy
+					</ul>  
+				</section>
+
+				<section data-transition="none">
+				  <h2>Openstack features</h2>
+				  <ul>
+				    <li>Scalable Design
+				    <li>Orchestration and Scheduling
+				    <li>Services: Database, Messaging, Hadoop
+				    <li>Identity Management
+				    <li>Health monitoring and Auto healing
+				    <li class="fragment">Application build and Deploy
+					</ul>  
+				</section>
+
+				<section>
+				  <h2>Why not just run &lt;insert PAAS here&gt; on Openstack?</h2>
+				  <p>Don't Repeat Yourself!   
+				  <p>Distributed Systems are hard to run.  Why run two?
+				</section>
 
 				<section>
 					<h2>Stellar Links</h2>

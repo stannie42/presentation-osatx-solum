@@ -43,13 +43,16 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Solum</h1>
-					<h2>Bringing Openstack and Docker<bR>
-					together.</h2>
+					<h1>HAPPY Birthday<br>Openstack</h1>
 					<h3>#OSATX 10 July 2014</h3>
 					<p>
 						<small>Created by <a href="http://tech.paulcz.net">Paul Czarkowski</a> / <a href="http://twitter.com/pczarkowski">@pczarkowski</a></small>
 					</p>
+				</section>
+
+				<section>
+				<h1>Solum</h1>
+				<h2>How openstack stopped worrying about Docker and learned to love it.</h2>
 				</section>
 
 				<section>
@@ -68,18 +71,25 @@
 				</section>
 
 				<section>
-					<h1>Solum</h1>
-					<h3>Whales and Unicorns working together...</h3>
-					<img src="images/narwhal.jpg"><br>
-					<a href="http://www.itsokaytobesmart.com/post/39668823993/narwhals-explained-an-odd-tooth">image credit</a>
+				<h1>Docker + Openstack</h1>
+				<ul>
+				<li>Nova-Docker Driver
+				<li>Docker Heat Plugin
+				<li>Dockenstack
+				<li>CoreOS
+				<li>libswarm ?
+				</ul>
+				<br><br>
+				<h2>Openstack has 99 problems</h2>
+				<h3>and Docker aint one of them.</h3>
 				</section>
 
 				<section>
-					<h2>Nova-Docker Driver Timeline</h2>
+					<h2>History of the Nova-Docker Driver</h2>
 					<ul>
 					<li>May 2013 - <a href="https://github.com/dotcloud/openstack-docker">Initial</a> Implementation by Sam Alba
-					<li>Sept 2013 - <a href="https://review.openstack.org/#/c/40759/">Merged</a> into Openstack
-					<li>Oct 2013 - Openstack Havana <a href="http://www.openstack.org/software/havana/press-release">Released</a> w/ Docker
+					<li>Sept 2013 - <a href="https://review.openstack.org/#/c/40759/">Merged</a> into Nova
+					<li>Oct 2013 - Havana <a href="http://www.openstack.org/software/havana/press-release">Released</a> w/ Docker
 					<li>March 2014 - Nova <a href="https://review.openstack.org/#/c/79740/">Removes</a> Docker Driver (moved to own repo)
 					<li>May 2014 - Docker, Rackspace, Redhat, others form Openstack <a href="https://wiki.openstack.org/wiki/Teams/Containers">Containers Team</a>.
 					<li>Ongoing - Active community improving Nova Docker driver.
@@ -92,15 +102,17 @@
 				<li>Scheduling
 				<li>Images
 				<li>Fast instantiation! ( some overhead in scheduling, but still v. fast)
-				<li>Native experience	( but painful initial install )			
+				<li>Native experience	( but painful initial install )
 				<pre><code>$ nova boot --image=cirros:latest --flavor=2 my_docker</code></pre>
+				<li>Openstack community doesn't know what to do with it.
 				</section>
 
 				<section>
-					<h2>Docker Heat Plugin Timeline</h2>
+					<h2>History of the Docker Heat Plugin</h2>
 					<ul>
 					<li>Oct 2013 - <a href="https://github.com/dotcloud/openstack-heat-docker">Initial implementation by Sam Alba</a>
 					<li>Dec 2013 - <a href="https://review.openstack.org/#/c/56493/">Merged into Heat.</a>
+					<li>May 2014 - Icehouse Released w/ Docker Heat Plugin.
 				</section>
 
 				<section>
@@ -108,42 +120,46 @@
 				<ul>
 				<li>Treat docker containers as heat resources
 				<li>Manual placement
-				<li>Heat has to be able to talk to docker service on VM
+				<li>Heat has to be able to talk to docker API on VM
 				<li>still somewhat painful install
 				</section>
 
-				<section>
-				<h2>Docker Heat Plugin Example</h2>
-			
-				</section>
-
-				<section>
-
-				<p>VMs aren't anything special, they're just infrastructure.
-				<p>Applications is what is important.
-				</section>
-
+  			<section>
+  			<h1>Developers are...</h1>
+  			<img src="images/newkingmakers.jpg">
+  			<p>and applications are their power.
+  			</section>
 
 				<section>
 					<h2>Openstack - VM Centric</h2>
-					<ul>
-					 <li>Nova Docker driver kicked out, difficult to install.
-					 <li>Heat plugin limited usefulness, difficult to install.
-					</ul>
+					<p>Still about infrastructure.  
+					<p>Still need ops to manage VMs and Operational tasks.
+					<p>Where is the developer/user success story ?
+					<p>Is focus now on chasing long tail of enterprise virtualization ?
 					 <img src="images/bronto.jpg" width="50%">
 				</section>
 
 				<section>
-					<h2>The game has changed.</h2>
-					<p>We should care about Applications not VMs
-					<p><img src="images/AtlasGatlingGun.png"><br>					<a href="http://aqwwiki.wikidot.com/atlas-gatling-gun">image source</a>
-					<p>Docker, Kubernates, Openshift, Mesos, CoreOS, CloudFoundry, Deis, Flynn, etc
+					<h2>Others - Application Centric</h2>
+					<p>Docker, Kubernates, Openshift, Mesos, CoreOS, CloudFoundry, Deis, Flynn, AWS, etc
+					<p><a href="http://aqwwiki.wikidot.com/atlas-gatling-gun"><img src="images/AtlasGatlingGun.png"></a>
+  			</section>
+
+				<section>
+				  <h1>The game has changed</h1>
 				</section>
 
 				<section>
-				  <h2>A call to arms...</h2>
+					<h1>Solum</h1>
+					<h2>An Application Centric Openstack.</h2>
 					<img src="images/dino_guns.jpg">
-					<h2 class="fragment">Solum - Application Centric Openstack.</h2>
+				</section>
+
+				<section>
+					<h1>Solum</h1>
+					<p>Whales and Unicorns working together to create...</p>
+					<h2>Platform as a service ++</h2>
+					<a href="http://www.itsokaytobesmart.com/post/39668823993/narwhals-explained-an-odd-tooth"><img src="images/narwhal.jpg"></a>
 				</section>
 
 				<section>
@@ -151,7 +167,7 @@
 					<h2>Developer Productivity</h2>
 					<ul>
 					  <li>Application Lifecycle Management (dev, test, stage, prod)
-					  <li>CI/CD w/ automated deployment
+					  <li>CI/CD with automated deployment
 					  <li>Integration with IDEs
 					  <li>Manage Services ( Database, Messaging, etc )
 					</ul>
@@ -171,7 +187,7 @@
 					<h1>Solum - Key Tenets</h1>
 					<h2>Community Driven</h2>
 					<ul>
-					  <li>Designed in the open ( started with empty git repo )
+					  <li>Designed in the open.
 					  <li>Opensourced under Apache 2.0
 					  <li>Mirror Openstack Governance and Contribution models.
 					  <li>Stackforge, Gerrit, Launchpad, IRC, etc.

@@ -1,0 +1,9 @@
+version: 1
+name: osatx
+description: Presentation for Openstack Austin.
+artifacts:
+- name: osatx
+  artifact_type: dockerfile
+  content:
+    href: https://github.com/paulczar/presentation-osatx-solum.git
+  language_pack: docker
